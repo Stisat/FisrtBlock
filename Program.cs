@@ -9,3 +9,10 @@
     return result;
 }
 
+void PrintArray(string [] inArray)
+{
+    for (int j = 0; j < inArray.Length; j++)
+    {
+        Console.Write(inArray[j]+ "\t");
+    }
+}
