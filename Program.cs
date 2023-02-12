@@ -16,3 +16,23 @@ void PrintArray(string [] inArray)
         Console.Write(inArray[j]+ "\t");
     }
 }
+
+void PrintSmallArray(string [] newArr)
+{
+    int mark = 0;
+    for (int i = 0; i < newArr.Length; i++)
+    {
+        if (newArr[i].Length <= 3)
+        {
+            Console.Write(newArr[i]+ "\t");
+            mark = 1;
+        }
+    }
+    Console.WriteLine();
+    if (mark == 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Нет строк с длинной в 3 символа и менее");
+    }
+}
+   
