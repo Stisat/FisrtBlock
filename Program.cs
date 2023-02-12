@@ -35,4 +35,14 @@ void PrintSmallArray(string [] newArr)
         Console.WriteLine("Нет строк с длинной в 3 символа и менее");
     }
 }
-   
+
+Console.Clear();
+Console.WriteLine("Введите количество элементов массива");
+int size = Convert.ToInt32(Console.ReadLine());
+string [] ArrStr = SetArrayStr(size);
+Console.WriteLine();
+Console.WriteLine("Ваш массив строк:");
+PrintArray(ArrStr);
+Console.WriteLine();
+Console.WriteLine("Итог:");
+PrintSmallArray(ArrStr);
