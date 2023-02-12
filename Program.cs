@@ -17,22 +17,19 @@ void PrintArray(string [] inArray)
     }
 }
 
-void PrintSmallArray(string [] newArr)
+string [] SmallArray(string [] newArr)
 {
-    int mark = 0;
+    string [] result = new string [newArr.Length];
+    int j = 0;
     for (int i = 0; i < newArr.Length; i++)
     {
         if (newArr[i].Length <= 3)
         {
-            Console.Write(newArr[i]+ "\t");
-            mark = 1;
+            result[j] = newArr[i];
+            j++;
         }
     }
-    if (mark == 0)
-    {
-        Console.WriteLine();
-        Console.WriteLine("Нет строк с длинной в 3 символа и менее");
-    }
+    return result;
 }
 
 Console.Clear();
@@ -44,4 +41,5 @@ Console.WriteLine("Ваш массив строк:");
 PrintArray(ArrStr);
 Console.WriteLine();
 Console.WriteLine("Итог:");
-PrintSmallArray(ArrStr);
+string [] newArrStr = SmallArray(ArrStr);
+PrintArray(newArrStr);
