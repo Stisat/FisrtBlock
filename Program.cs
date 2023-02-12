@@ -28,7 +28,6 @@ void PrintSmallArray(string [] newArr)
             mark = 1;
         }
     }
-    Console.WriteLine();
     if (mark == 0)
     {
         Console.WriteLine();
